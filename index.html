@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terminal :: Connection</title>
+  <style>
+    body { background-color: #050505; color: #00ff66; font-family: monospace; padding: 15px; font-size: 14px; }
+    .header { color: #00ccff; font-weight: bold; }
+    .dim { color: #555; }
+    .accent { color: #ff0055; font-weight: bold; }
+    .yellow { color: #ffcc00; }
+    .heart { color: #ff3366; font-weight: bold; white-space: pre; font-size: 12px; text-align: center; }
+    .card { border: 1px solid #00ccff; padding: 15px; border-radius: 8px; margin-top: 15px; background: rgba(0,204,255,0.05); }
+    #output { white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <div class="header">/slot/0/ console_romantic_v2.0</div>
+  <div class="dim">------------------------------------------------------------</div>
+  <div id="output"></div>
+  <script>
+    const output = document.getElementById('output');
+    const lines = [
+      { text: "Initializing quantum encryption module...", delay: 300, class: "dim" },
+      { text: "Access granted. Security protocol bypass ACTIVE.", delay: 400, class: "" },
+      { text: "Aris OSINT Tracker :: Deep Heart Linker v2.0.0-h\n", delay: 500, class: "header" },
+      { text: "[!] INITIALIZING TARGET TRACE...", delay: 600, class: "yellow" },
+      { text: "[>] Scanning global coordinates...", delay: 400, class: "dim" },
+      { text: "\n[+] TARGET LOCATED: O teu coração.", delay: 800, class: "accent" },
+      { text: "------------------------------------------------------------", delay: 200, class: "dim" }
+    ];
+    async function run() {
+      for (let l of lines) {
+        let p = document.createElement('div');
+        if (l.class) p.className = l.class;
+        p.innerText = l.text;
+        output.appendChild(p);
+        window.scrollTo(0, document.body.scrollHeight);
+        await new Promise(r => setTimeout(r, l.delay));
+      }
+      await new Promise(r => setTimeout(r, 600));
+      let heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerText = "\n   ***   ***   \n ***** *****  \n************* \n ***********  \n   *********  \n     *****    \n       *      \n";
+      output.appendChild(heart);
+      let msg = document.createElement('div');
+      msg.className = 'card';
+      msg.innerHTML = '<div class="accent" style="font-size:16px;">❤️ BOM DIA, MEU AMOR! ❤️</div><br><div>Entre todas as linhas de código e sistemas do mundo, você é a minha melhor escolha.</div><br><div class="yellow">Tenha um dia incrível! ✨🥰</div>';
+      output.appendChild(msg);
+    }
+    run();
+  </script>
+</body>
+</html>
